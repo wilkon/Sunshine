@@ -44,6 +44,7 @@ import java.util.List;
  * A placeholder fragment containing a simple view.
  */
 public class ForecastFragment extends Fragment {
+    String LOG_TAG = ForecastFragment.class.getSimpleName();
 
     ArrayAdapter<String> mForecastAdapter;
 
@@ -55,6 +56,24 @@ public class ForecastFragment extends Fragment {
     public void onStart() {
         super.onStart();
         updateWeather();
+        Log.v(LOG_TAG, "on start");
+    }
+
+
+    @Override
+    public void onPause(){
+        super.onPause();
+        Log.v(LOG_TAG, "on pause");
+    }
+    @Override
+    public void onStop(){
+        super.onStop();
+        Log.v(LOG_TAG, "on stop");
+    }
+    @Override
+    public void onResume(){
+        super.onResume();
+        Log.v(LOG_TAG, "on resume");
     }
 
     @Override

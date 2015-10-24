@@ -70,6 +70,27 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onPause(){
+        super.onPause();
+        Log.v(LOG_TAG, "on pause");
+    }
+    @Override
+    public void onStart(){
+        super.onStart();
+        Log.v(LOG_TAG, "on start");
+    }
+    @Override
+    public void onStop(){
+        super.onStop();
+        Log.v(LOG_TAG, "on stop");
+    }
+    @Override
+    public void onResume(){
+        super.onResume();
+        Log.v(LOG_TAG, "on resume");
+    }
+
     private void openPreferredLocationInMap(){
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
 
